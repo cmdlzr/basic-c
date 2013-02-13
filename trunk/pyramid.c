@@ -15,12 +15,15 @@
 #include <stdio.h>
 
 int main() {
-    int total, skipRows, skipColumns;
+    int total, rows, cols;
     
-    scanf("%d %d %d", &total, &skipRows, &skipColumns);
+    scanf("%d %d %d", &total, &rows, &cols);
     
-    for ( int row = skipRows + 1; row <= total; row++ ) {
-        for ( int column = skipColumns + 1; column < row; column++ ) {
+    if ( cols > rows ) {
+        rows = cols;
+    }
+    for ( int row = rows + 1; row <= total; row++ ) {
+        for ( int column = cols + 1; column < row; column++ ) {
             printf("%d ", column);
         }
         printf("%d\n", row);
