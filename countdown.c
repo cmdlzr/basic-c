@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int upperLimit;
+    int counter;
     
-    scanf("%d", &upperLimit);
+    scanf("%d", &counter);
     
-    for ( ; upperLimit > 0; upperLimit-- ) {
-        printf("%d ", upperLimit);
+    for ( ; counter > 0; counter-- ) {
+        printf("%d ", counter);
     }
     printf("0\n");
     
